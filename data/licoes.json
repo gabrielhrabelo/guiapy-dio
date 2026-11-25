@@ -1,0 +1,50 @@
+[
+  {
+    "id": "compreensao",
+    "titulo": "Compreensão de listas",
+    "termos": ["compreensão", "comprehension", "compreensões", "filtrar pares"],
+    "explicacao": "Uma compreensão de lista cria uma nova lista. O if no final filtra os itens, e a expressão antes do for define o valor de cada item incluído.",
+    "exemplo": "pares_ao_quadrado = [n**2 for n in range(6) if n % 2 == 0]  # [0, 4, 16]",
+    "fonte": "https://docs.python.org/pt-br/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "id": "tuplas",
+    "titulo": "Tuplas",
+    "termos": ["tupla", "tuplas", "tuple", "imutável", "imutabilidade"],
+    "explicacao": "Uma tupla é imutável: atribuir por índice gera TypeError. Para trocar um item, crie uma nova tupla. Uma tupla de um único item precisa da vírgula.",
+    "exemplo": "carros = ('gol', 'celta'); carros = ('uno',) + carros[1:]  # ('uno', 'celta')",
+    "fonte": "https://docs.python.org/pt-br/3/tutorial/datastructures.html#tuples-and-sequences"
+  },
+  {
+    "id": "conjuntos",
+    "titulo": "Conjuntos",
+    "termos": ["conjunto", "conjuntos", "set", "discard", "duplicatas", "repetidos"],
+    "explicacao": "Um conjunto reúne elementos distintos. Use discard para remover um elemento se ele existir. Se precisar eliminar duplicatas preservando a ordem da entrada, use dict.fromkeys.",
+    "exemplo": "unicos = list(dict.fromkeys(['TX1', 'TX2', 'TX1']))  # ['TX1', 'TX2']",
+    "fonte": "https://docs.python.org/pt-br/3/tutorial/datastructures.html#sets"
+  },
+  {
+    "id": "dicionarios",
+    "titulo": "Dicionários",
+    "termos": ["dicionário", "dicionários", "dict", "get", "chave", "chaves", "keyerror"],
+    "explicacao": "Um dicionário associa cada chave a um valor. Use get para consultar uma chave e receber None, ou um padrão informado, quando a chave estiver ausente.",
+    "exemplo": "contato = {'pais': 'Brasil'}; contato.get('cidade', 'Não informada')",
+    "fonte": "https://docs.python.org/pt-br/3/tutorial/datastructures.html#dictionaries"
+  },
+  {
+    "id": "funcoes",
+    "titulo": "Funções e retorno",
+    "termos": ["função", "funções", "return", "retornar", "retorno", "devolver valores"],
+    "explicacao": "Use def para definir uma função e return para entregar o resultado. Uma expressão como return a, b devolve uma tupla que pode ser desempacotada.",
+    "exemplo": "def extremos(numeros):\n    return min(numeros), max(numeros)\n\nmenor, maior = extremos([4, 1, 7])  # 1, 7",
+    "fonte": "https://docs.python.org/pt-br/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "id": "argumentos",
+    "titulo": "Argumentos posicionais e nomeados",
+    "termos": ["posicional", "posicionais", "nomeado", "nomeados", "args", "kwargs", "argumentos"],
+    "explicacao": "Antes de /, o parâmetro só pode ser passado por posição. Em uma definição, *args reúne argumentos posicionais extras em uma tupla, e **kwargs reúne argumentos nomeados extras em um dicionário.",
+    "exemplo": "def registrar(nome, /, *args, **kwargs):\n    return nome, args, kwargs\n\nregistrar('Ana', 2, curso='Python')  # ('Ana', (2,), {'curso': 'Python'})",
+    "fonte": "https://docs.python.org/pt-br/3/tutorial/controlflow.html#more-on-defining-functions"
+  }
+]
